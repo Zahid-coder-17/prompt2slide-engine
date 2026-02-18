@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-pptx
+diffusers
+transformers
+accelerate
+bitsandbytes
+sentence-transformers
+faiss-cpu
+pillow
