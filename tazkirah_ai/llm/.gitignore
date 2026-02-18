@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+embeddings/
+*.pt
+*.bin
+*.ckpt
+.env
