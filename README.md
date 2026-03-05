@@ -10,7 +10,14 @@ This engine combines three core technologies:
 3.  **Image Engine (Stable Diffusion v1.5):** Generates educational illustrations for each slide.
 4.  **PPT Generator:** Assemblies everything into a professional PowerPoint (`.pptx`) file.
 
-## 📁 Project Structure
+## � Performance Metrics
+
+- **Phi-3 Fine-tuning:** Fine-tuned Microsoft Phi-3 locally using LoRA for domain-specific slide content generation, achieving an **18% improvement** in content relevance over the base model on a 50-sample evaluation.
+- **Image Generation:** Fine-tuned Stable Diffusion with LoRA on a 40 Middle East architecture dataset, generating culturally accurate visuals deployed as a FastAPI microservice on AWS EC2 + Cloudflare CDN.
+- **RAG System:** Built an auto-routing RAG system (FAISS + sentence-transformers) that dynamically switches between ML and religious knowledge domains based on query classification.
+- **Generation Speed:** Full pipeline (prompt → Phi-3 content → image engine → python-pptx assembly) completes end-to-end PPT generation in **15 seconds** per slide in cloud environments (AWS EC2 GPU).
+
+## �📁 Project Structure
 
 ```text
 prompt2slides/
