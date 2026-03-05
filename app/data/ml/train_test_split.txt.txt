@@ -1,0 +1,202 @@
+1. Definition
+
+Train–test split is a technique used to divide a dataset into two separate parts:
+one part for training the machine learning model and another part for evaluating its performance.
+
+2. Why Train–Test Split is Needed
+
+Machine learning models must be evaluated on unseen data to measure how well they generalize.
+
+If a model is tested on the same data it was trained on:
+
+Performance appears falsely high
+
+Overfitting cannot be detected
+
+Model reliability is unknown
+
+Train–test split ensures fair and realistic evaluation.
+
+3. Core Idea
+
+The core idea of train–test split is:
+
+“Train the model on one portion of data and test it on a different, unseen portion.”
+
+This simulates how the model will perform in real-world scenarios.
+
+4. Basic Structure
+
+A dataset is split into:
+
+Training set → used to learn parameters
+
+Testing set → used only for evaluation
+
+Common split ratios:
+
+80% train / 20% test
+
+70% train / 30% test
+
+The choice depends on dataset size.
+
+5. How Train–Test Split Works
+
+Steps:
+
+Shuffle the dataset
+
+Divide data based on chosen ratio
+
+Train model on training set
+
+Evaluate model on test set
+
+The test set must remain untouched during training.
+
+6. Mathematical Intuition
+
+Let:
+
+D = full dataset
+
+D_train ⊂ D
+
+D_test ⊂ D
+
+D_train ∩ D_test = ∅
+
+This ensures:
+
+No data leakage
+
+Independent evaluation
+
+7. Importance of Random Shuffling
+
+Random shuffling:
+
+Prevents ordering bias
+
+Ensures representative samples
+
+Improves generalization evaluation
+
+Without shuffling, the model may learn misleading patterns.
+
+8. Stratified Train–Test Split
+
+In classification tasks:
+
+Class distribution must be preserved
+
+Stratified splitting ensures:
+
+Same class ratio in train and test sets
+
+Better evaluation for imbalanced datasets
+
+Highly recommended for classification problems.
+
+9. Train–Test Split vs Validation Set
+
+Sometimes data is split into:
+
+Training set
+
+Validation set
+
+Test set
+
+Purpose:
+
+Training → learn parameters
+
+Validation → tune hyperparameters
+
+Test → final evaluation
+
+Test set should be used only once.
+
+10. Train–Test Split and Overfitting
+
+If:
+
+Training accuracy is high
+
+Test accuracy is low
+
+Then:
+
+Model is overfitting
+
+Train–test split helps detect overfitting early.
+
+11. Train–Test Split in Model Pipeline
+
+Typical ML pipeline:
+
+Data collection
+
+Data preprocessing
+
+Train–test split
+
+Model training
+
+Model evaluation
+
+Splitting must be done before training.
+
+12. Common Split Ratios
+
+Small dataset → 90% train / 10% test
+
+Medium dataset → 80% / 20%
+
+Large dataset → 70% / 30%
+
+More data in training usually improves learning.
+
+13. Common Mistakes
+
+Using test data during training
+
+Data leakage via preprocessing before split
+
+Not shuffling data
+
+Ignoring class imbalance
+
+These lead to misleading results.
+
+14. Train–Test Split in Practice
+
+Used in:
+
+Regression tasks
+
+Classification models
+
+Deep learning pipelines
+
+Feature engineering experiments
+
+Every ML experiment starts with data splitting.
+
+15. Relationship with Other Concepts
+
+Loss function evaluates performance
+
+Gradient descent learns from training data
+
+Learning rate controls optimization
+
+Train–test split validates learning
+
+Together, they form a complete training workflow.
+
+16. Summary
+
+Train–test split is a fundamental evaluation technique that separates data into training and testing sets to ensure unbiased assessment of a model’s performance on unseen data.

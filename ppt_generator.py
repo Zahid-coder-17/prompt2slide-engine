@@ -150,9 +150,9 @@ def create_presentation(slides, theme="modern", output_file="final_presentation.
         # Image (RIGHT SIDE)
         # -------------------------------
         image_path = os.path.join(
-    "/content/generated_images",
-    f"slide_{slide_data['slide_number']}.png"
-)
+            "generated_images",
+            f"slide_{slide_data['slide_number']}.png"
+        )
 
 
         if image_path and os.path.exists(image_path):

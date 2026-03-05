@@ -1,0 +1,27 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Project-specific
+outputs/
+generated_images/
+*.pptx
+*.index
+*.pkl
+
+# Fine-tuning artifacts (Too large for git)
+finetune/phi3-lora-output/
+checkpoint-*/
+
+# Logs
+*.log
